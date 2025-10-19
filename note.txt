@@ -1,0 +1,63 @@
+things in gameboard = {
+
+
+    board → An array of 9 elements (["", "", "", ...])
+
+getBoard() → Returns the current board state.
+
+setCell(index, marker) → Puts X or O in a cell (if empty).
+
+resetBoard() → Clears all cells.
+
+isCellEmpty(index) → Returns true if the cell is empty.
+
+printBoard() (optional) → Console logs for debugging.
+}
+
+
+
+
+
+ GameController Module
+
+Purpose:
+Handles the flow of the game — turns, win checks, and rules.
+
+Main Functions/Variables:
+
+currentPlayer → Tracks whose turn it is (Player 1 or Player 2).
+
+switchPlayer() → Switches between players.
+
+playRound(index) → Called when a cell is clicked.
+
+Checks if move is valid.
+
+Updates board.
+
+Checks for win/draw.
+
+Switches player if game continues.
+
+checkWinner() → Returns "X", "O", "draw", or null.
+
+resetGame() → Resets the board and player states.
+
+getCurrentPlayer() → Returns current player's marker.
+
+
+
+
+
+
+const player = function (name,mark){
+    const getName = function(){
+        console.log(name);
+        return name;
+    }
+    const getMark = function(){
+        console.log(mark);
+        return mark;
+    }
+    return{getName,getMark};
+};
